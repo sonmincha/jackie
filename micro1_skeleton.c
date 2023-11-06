@@ -83,6 +83,10 @@ void grayScale_transform (unsigned char* in, int const height, int const width, 
 }
 
 void sobelFiltering_transform (unsigned char* in, int const height, int const width, int const channel, unsigned char* out) {
+	for (int i = 0; i < (height * width * channel); i++)
+	{
+		out[i] = 0;
+	}
 	for (int j = 0; j < width - 2; j++) {
 		for (int i = 0; i < height - 2; i++) {
 
